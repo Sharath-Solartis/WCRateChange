@@ -17,11 +17,11 @@ public class RateChanger
 		System.setProperty("jsse.enableSNIExtension", "false");
 		DB = new DatabaseOperation();
 
-		DB.ConnectionSetup(System.getProperty("JDBC_DRIVER"), System.getProperty("DB_URL"), System.getProperty("USER"), System.getProperty("password"));
-		excelExtract.ExcelExtractor(System.getProperty("ExcelPath"),DB);
+		//DB.ConnectionSetup(System.getProperty("JDBC_DRIVER"), System.getProperty("DB_URL"), System.getProperty("USER"), System.getProperty("password"));
+		//excelExtract.ExcelExtractor(System.getProperty("ExcelPath"),DB);
 		
-		//DB.ConnectionSetup("com.mysql.jdbc.Driver", "jdbc:mysql://192.168.1.228:3306/test", "root", "password");
-		//excelExtract.ExcelExtractor("C:\\Users\\sabarinath_jv.SOLARTISTECH\\Desktop\\WCRate.xls",DB);
+		DB.ConnectionSetup("com.mysql.jdbc.Driver", "jdbc:mysql://192.168.1.228:3306/test", "root", "password");
+		excelExtract.ExcelExtractor("C:\\Users\\sabarinath_jv.SOLARTISTECH\\Desktop\\WCRate.xls",DB);
 		DB.CloseConn();
 	}
 }
